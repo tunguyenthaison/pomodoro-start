@@ -31,21 +31,14 @@ x_coordinate = int(screen_width / 2) - int(window_width / 2)
 y_coordinate = int(screen_height / 2) - int(window_height / 2)
 window.geometry("{}x{}+{}+{}".format(window_width, window_height, x_coordinate, y_coordinate))
 
-# Import background picture using .place
+
 tomato = PhotoImage(file='tomato.png')
-# background_label = Label(window, image=tomato)
-# background_label.place(x=0, y=0, relheight=1, relwidth=1)
 
 # Canvas
 canvas = Canvas(width=window_width, height=window_height, bg=YELLOW, highlightthickness=0)
 canvas.create_image(window_width//4, window_height//4+10, image=tomato)
 canvas.create_text(window_width//4, window_height//4+30, text="00:00", fill="white", font=(FONT_NAME, 32, "bold"))
 canvas.pack()
-
-# Add time
-# time_label = Label(window, text="00:00", font=FONT_NAME)
-# time_label.config
-# time_label.place(relx=0.5, rely=0.5, anchor="center")
 
 # Main loop
 window.mainloop()
