@@ -15,8 +15,10 @@ LONG_BREAK_MIN = 20
 # ---------------------------- TIMER RESET ------------------------------- #
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
-# def get_current():
-#     return time.time()
+def get_current():
+    return time.time()
+
+
 #
 #
 # class TimeObject:
@@ -51,7 +53,6 @@ LONG_BREAK_MIN = 20
 #
 #         time_text = f"{minutes}:{seconds}"
 #         return time_text
-
 
 
 class TimeObjectDown:
@@ -89,9 +90,8 @@ class TimeObjectDown:
         time_text = f"{minutes}:{seconds}"
         return time_text
 
+
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
-
-
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -119,10 +119,22 @@ while time_object.get_minutes() <= WORK_MIN:
     time_string = time_object.get_text()
     show_clock = canvas.create_text(window_width // 4, window_height // 4 + 30, text=time_string, fill="white",
                                     font=(FONT_NAME, 32, "bold"), tags="clock")
-    canvas.update()
-    canvas.pack()
-    canvas.delete("clock")
+
+
+    # # Buttons
+    # def action():
+    #     pass
+    # # calls action() when pressed
+    # button = Button(text="Calculate", command=action)
+    # button.place(0,0)
+    #
+    # canvas.update()
+    # canvas.pack()
+    # canvas.delete("clock")
+
+
+
+
 
 # Main loop
-
 window.mainloop()
