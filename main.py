@@ -119,6 +119,10 @@ while time_object.get_minutes() <= WORK_MIN:
     time_string = time_object.get_text()
     show_clock = canvas.create_text(window_width // 4, window_height // 4 + 30, text=time_string, fill="white",
                                     font=(FONT_NAME, 32, "bold"), tags="clock")
+    canvas.update()
+    canvas.pack()
+    canvas.delete("clock")
+
 
 
     # # Buttons
