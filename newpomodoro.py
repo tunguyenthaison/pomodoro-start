@@ -132,9 +132,6 @@ def count_down(count):
         start_timer()
         check_marks.config(text="✔︎" * work_reps)
 
-
-
-
 #
 # def count_down_time(count):
 #     canvas
